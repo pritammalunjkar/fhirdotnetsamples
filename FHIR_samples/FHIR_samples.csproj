@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E698E45-AFD8-4952-9387-1E70CC6C94C1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FHIR_samples</RootNamespace>
+    <AssemblyName>FHIR_samples</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>NHCX_Sample_code.InsurancePlanBundle</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Firely.Fhir.Packages, Version=3.0.2.0, Culture=neutral, PublicKeyToken=0ddea2cfac6b533f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Firely.Fhir.Packages.3.0.2\lib\net452\Firely.Fhir.Packages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hl7.Fhir.ElementModel, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d706911480550fc3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hl7.Fhir.ElementModel.4.3.0\lib\net452\Hl7.Fhir.ElementModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hl7.Fhir.R4.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d706911480550fc3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hl7.Fhir.R4.4.3.0\lib\net452\Hl7.Fhir.R4.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hl7.Fhir.R4.Specification, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d706911480550fc3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hl7.Fhir.Specification.R4.4.3.0\lib\net452\Hl7.Fhir.R4.Specification.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Serialization, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d706911480550fc3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hl7.Fhir.Serialization.4.3.0\lib\net452\Hl7.Fhir.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Support, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d706911480550fc3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hl7.Fhir.Support.4.3.0\lib\net452\Hl7.Fhir.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Support.Poco, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d706911480550fc3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hl7.Fhir.Support.Poco.4.3.0\lib\net452\Hl7.Fhir.Support.Poco.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hl7.FhirPath, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d706911480550fc3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hl7.FhirPath.4.3.0\lib\net452\Hl7.FhirPath.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.3.11, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.3.3\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SemVer, Version=1.2.0.0, Culture=neutral, PublicKeyToken=a89bb7dc6f7a145c, processorArchitecture=MSIL">
+      <HintPath>..\packages\SemanticVersioning.1.2.0\lib\net45\SemVer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="abdm\DiagnosticReportImagingDcmSample.cs" />
+    <Compile Include="abdm\DiagnosticReportImagingMediaSample.cs" />
+    <Compile Include="abdm\DiagnosticReportLabSample.cs" />
+    <Compile Include="abdm\DischargeSummarySample.cs" />
+    <Compile Include="abdm\HealthDocumentRecordSample.cs" />
+    <Compile Include="abdm\ImmunizationRecordSample.cs" />
+    <Compile Include="abdm\OPConsultNoteSample.cs" />
+    <Compile Include="abdm\PrescriptionSample.cs" />
+    <Compile Include="abdm\ResourcePopulator.cs" />
+    <Compile Include="abdm\WellnessRecordSample.cs" />
+    <Compile Include="nhcx\ClaimBundleResource_preauth.cs" />
+    <Compile Include="nhcx\ClaimBundleResource_predetermination.cs" />
+    <Compile Include="nhcx\ClaimBundleResource_settlement.cs" />
+    <Compile Include="nhcx\ClaimBundle_enhancement.cs" />
+    <Compile Include="nhcx\ClaimResponseBundle_enhancement.cs" />
+    <Compile Include="nhcx\ClaimResponseBundle_preauth.cs" />
+    <Compile Include="nhcx\ClaimResponseBundle_predetermination.cs" />
+    <Compile Include="nhcx\ClaimResponseBundle_settlement.cs" />
+    <Compile Include="nhcx\CoverageEligibilityRequestBundle.cs" />
+    <Compile Include="nhcx\CoverageEligibilityResponseBundle.cs" />
+    <Compile Include="nhcx\InsurancePlanBundle.cs" />
+    <Compile Include="nhcx\ResourcePopulator.cs" />
+    <Compile Include="nhcx\TaskBundleForCommunicationRequest.cs" />
+    <Compile Include="nhcx\TaskBundleForCommunicationResponse.cs" />
+    <Compile Include="nhcx\TaskBundleForPaymentNoticeRequest.cs" />
+    <Compile Include="nhcx\TaskBundleForPaymentNoticeResponse.cs" />
+    <Compile Include="nhcx\TaskBundleForReprocessRequest.cs" />
+    <Compile Include="nhcx\TaskBundleForReprocessResponse.cs" />
+    <Compile Include="nhcx\TaskBundleForSearchRequest.cs" />
+    <Compile Include="nhcx\TaskBundleForSearchResponse.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="bin\Debug\FHIR_samples.exe.config" />
+    <None Include="bin\Debug\FHIR_samples.vshost.exe.config" />
+    <None Include="bin\Debug\FHIR_samples.vshost.exe.manifest" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\FHIR_samples.exe" />
+    <Content Include="bin\Debug\FHIR_samples.pdb" />
+    <Content Include="bin\Debug\FHIR_samples.vshost.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
